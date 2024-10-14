@@ -17,7 +17,7 @@ pyautogui.PAUSE = 0.8
 #abrir o navegador
 #apertar a tecla windowns 
 pyautogui.press("win")
-pyautogui.write("crome")
+pyautogui.write("chrome")
 pyautogui.press("enter")
 pyautogui.click(x=778, y=583)
 time.sleep(3)
@@ -29,11 +29,11 @@ pyautogui.press("enter")
 #quero dar pause de 3 segundos crome
 
 time.sleep(3)
-pyautogui.click(x=213, y=524)
-time.sleep(3)
+pyautogui.click(x=648, y=557)
+time.sleep(2)
 pyautogui.write("pythonforpython@gmail.com")
-time.sleep(3)
-pyautogui.click(x=516, y=626)
+
+pyautogui.press("tab")
 pyautogui.write("senhasenha")
 pyautogui.press("enter")
 
