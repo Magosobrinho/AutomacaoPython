@@ -50,47 +50,53 @@ time.sleep(2)
 pyautogui.click(x=855, y=429)
 
 linha = 0
-
+#para cada linha da minha tabela quero que execute todos os comandos 
+for linha in tabela.index:
+    #selecionar o primeiro campo 
+    pyautogui.click(x=855, y=429)
 #texto = string = str()
 
-#código
-codigo = tabela.loc[linha,"codigo"]
-pyautogui.write(str(codigo))
-pyautogui.press("tab")
+    #código
+    codigo = tabela.loc[linha,"codigo"]
+    pyautogui.write(str(codigo))
+    pyautogui.press("tab")
 
-#marca
-marca = tabela.loc[linha, "marca"]
-pyautogui.write(str(marca))
-pyautogui.press("tab")
+    #marca
+    marca = tabela.loc[linha, "marca"]
+    pyautogui.write(str(marca))
+    pyautogui.press("tab")
 
-#tipo
-tipo = tabela.loc[linha, "tipo"]
-pyautogui.write(str(tipo))
-pyautogui.press("tab")
+    #tipo
+    tipo = tabela.loc[linha, "tipo"]
+    pyautogui.write(str(tipo))
+    pyautogui.press("tab")
 
-#categoria
-categoria = tabela.loc[linha, "categoria"]
-pyautogui.write(str(categoria))
-pyautogui.press("tab")
+    #categoria
+    categoria = tabela.loc[linha, "categoria"]
+    pyautogui.write(str(categoria))
+    pyautogui.press("tab")
 
-#preco unitario
-preco_unitario = tabela.loc[linha, "preco_unitario"]
-pyautogui.write(str(preco_unitario))
-pyautogui.press("tab")
+    #preco unitario
+    preco_unitario = tabela.loc[linha, "preco_unitario"]
+    pyautogui.write(str(preco_unitario))
+    pyautogui.press("tab")
 
-#custo
-custo = tabela.loc[linha, "custo"]
-pyautogui.write(str(custo))
-pyautogui.press("tab")
+    #custo
+    custo = tabela.loc[linha, "custo"]
+    pyautogui.write(str(custo))
+    pyautogui.press("tab")
 
-#obs
-obs = tabela.loc[linha, "obs"]
-pyautogui.write(str(obs))
-pyautogui.press("tab")
+    #obs
+    #nan = not a number
+    obs = tabela.loc[linha, "obs"]
+    #if condicao; o que você quer fazer se a condicao for verdadeira 
+    if not pandas.isna(obs):
+        pyautogui.write(str(obs))
+    pyautogui.press("tab")
 
-#clicar no botao enviar 
-pyautogui.press("enter")
-
+    #clicar no botao enviar 
+    pyautogui.press("enter")
+    pyautogui.scroll(5000)
 
 # 5: Repetir o processo de cadastro até acabar os produtos 
 
